@@ -16,7 +16,7 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Install Application ==========
 ADD SRS-CentOS6-x86_64-2.0.230 /srs
-RUN yum install redhat-lsb
+RUN yum install -y redhat-lsb
 RUN chmod a+x /srs/INSTALL
 RUN /srs/INSTALL
 
