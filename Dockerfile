@@ -16,6 +16,7 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Install Application ==========
 ADD SRS-CentOS6-x86_64-2.0.230 /srs
+RUN chmod a+x /srs/INSTALL
 RUN /srs/INSTALL
 
 #========== Expose Ports ==========
