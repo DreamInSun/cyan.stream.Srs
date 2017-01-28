@@ -2,7 +2,7 @@
 # cyan.stream.Srs
 
 #========== Basic Image ==========
-From centos:7
+From ubuntu:12.10
 MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Extension ==========
