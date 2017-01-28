@@ -15,12 +15,12 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 
 #========== Install Application ==========
-ADD install /install
-
 RUN yum install -y gcc gcc-c++ gdb make
-RUN yum install -y patch unzip pcre 
+RUN yum install -y patch unzip pcre-devel 
 RUN yum install -y automake autoconf 
 RUN yum install -y libtool zlib-devel
+
+ADD install /install
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
