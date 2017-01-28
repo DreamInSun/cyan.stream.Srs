@@ -18,7 +18,9 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 ADD install /install
 
 RUN yum install -y gcc gcc-c++ gdb make
-RUN yum install -y patch unzip pcre automake autoconf libtool zlib-devel
+RUN yum install -y patch unzip pcre 
+RUN yum install -y automake autoconf 
+RUN yum install -y libtool zlib-devel
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
