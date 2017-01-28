@@ -138,9 +138,9 @@ function Ubuntu_prepare()
     return 0
 }
 # donot prepare tools, for srs-librtmp depends only gcc and g++.
-if [ $SRS_EXPORT_LIBRTMP_PROJECT = NO ]; then
-    Ubuntu_prepare; ret=$?; if [[ 0 -ne $ret ]]; then echo "Ubuntu prepare failed, ret=$ret"; exit $ret; fi
-fi
+#if [ $SRS_EXPORT_LIBRTMP_PROJECT = NO ]; then
+#    Ubuntu_prepare; ret=$?; if [[ 0 -ne $ret ]]; then echo "Ubuntu prepare failed, ret=$ret"; exit $ret; fi
+#fi
 #####################################################################################
 # for Centos, auto install tools by yum
 #####################################################################################
