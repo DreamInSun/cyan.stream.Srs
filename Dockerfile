@@ -17,8 +17,8 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 #========== Install Application ==========
 ADD install /install
 
-USER root
 RUN yum install -y gcc gcc-c++ gdb make
+RUN yum install -y patch unzip pcre automake autoconf libtool zlib-devel
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
