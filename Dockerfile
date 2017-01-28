@@ -15,12 +15,12 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 
 #========== Install Application ==========
-ADD SRS-CentOS6-x86_64-2.0.230 /srs
+ADD SRS-CentOS6-x86_64-2.0.230 /install
 RUN yum install -y redhat-lsb
-RUN chmod a+x /srs/INSTALL
-RUN /srs/INSTALL
+RUN chmod a+x /install/INSTALL
+#RUN sudo /srs/INSTALL
 
-ADD conf /srs
+ADD conf /srs/conf
 
 
 #========== Expose Ports ==========
