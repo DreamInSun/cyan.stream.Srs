@@ -16,9 +16,9 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Install Application ==========
 ADD install /install
-RUN sudo RPM -ivh /install/redhat-lsb-core-4.0-7.el6.centos.x86_64.rpm
-RUN sudo chmod a+x /install/SRS-CentOS6-x86_64-2.0.230/INSTALL
-RUN sudo /install/SRS-CentOS6-x86_64-2.0.230/INSTALL
+RUN RPM -ivh /install/redhat-lsb-core-4.0-7.el6.centos.x86_64.rpm
+RUN chmod a+x /install/SRS-CentOS6-x86_64-2.0.230/INSTALL
+RUN /install/SRS-CentOS6-x86_64-2.0.230/INSTALL
 
 ADD conf /conf
 
