@@ -20,14 +20,20 @@ RUN yum install -y redhat-lsb
 RUN chmod a+x /srs/INSTALL
 RUN /srs/INSTALL
 
+ADD conf /srs
+
+
 #========== Expose Ports ==========
 EXPOSE 1935
+EXPOSE 18080
+EXPOSE 1985
 
 #========== VOLUME ==========
 
 
 #========= Add Entry Point ==========
-
+ADD shell /shell
+RUN chmod a+x /shell/*
 
 #========= Start Service ==========
-
+ENTRYPOINT ["/shell/docker-entrypoint.sh"] 
