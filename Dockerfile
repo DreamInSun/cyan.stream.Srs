@@ -17,7 +17,7 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 #========== Install Application ==========
 ADD install /install
 
-RUN yum install -y gcc gcc-c++ gcc-devel
+RUN yum install -y gcc gcc-c++ gcc-devel make
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
