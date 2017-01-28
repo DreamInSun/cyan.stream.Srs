@@ -36,4 +36,5 @@ ADD shell /shell
 RUN chmod a+x /shell/*
 
 #========= Start Service ==========
-ENTRYPOINT ["/shell/docker-entrypoint.sh"] 
+#ENTRYPOINT ["/shell/docker-entrypoint.sh"] 
+CMD /bin/bash
