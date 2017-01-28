@@ -16,8 +16,8 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Install Application ==========
 ADD install /install
-
-RUN yum install -y gcc gcc-c++ gcc-devel make
+RUN cat /etc/redhat-release
+RUN yum install -y gcc gcc-c++ gcc-devel make patch
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
