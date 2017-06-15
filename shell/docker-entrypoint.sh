@@ -30,4 +30,5 @@ echo ========== Database Configuration ==========
 echo ========== Start Application ==========
 cd /install
 bash ./objs/srs -c $SRS_CONFIG_FILE -t
-tailf ./logs/srs.log
+cat "Start SRS and trace log..." >> /logs/srs.log
+tailf /logs/srs.log
