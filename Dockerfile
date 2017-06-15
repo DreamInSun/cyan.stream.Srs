@@ -45,8 +45,8 @@ EXPOSE 1985
 #========= Add Entry Point ==========
 ADD shell /shell
 RUN chmod a+x /shell/*
-#ENTRYPOINT ["/shell/docker-entrypoint.sh"]
+ENTRYPOINT ["/shell/docker-entrypoint.sh"]
 
 #========= Start Service ==========
-WORKDIR /install
-CMD ./srs/objs/srs -c /conf/srs.conf
+#WORKDIR /install
+#CMD ./srs/objs/srs -c /conf/srs.conf

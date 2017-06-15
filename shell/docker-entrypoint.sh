@@ -10,10 +10,10 @@ echo PROFILE is $PROFILE
 echo CONFIG_KEY is $CONFIG_KEY
 
 echo ========== Set Up Environment ========== 
-export SRS_HOME /srs
+export SRS_HOME /install/srs
 
 if [ ! $SRS_CONFIG_FILE ]; then
-  SRS_CONFIG_FILE=/srs/conf/srs.conf
+  SRS_CONFIG_FILE=/conf/srs.conf
   echo "Configuration file path not setting, Use Default  : " $SRS_CONFIG_FILE
 else
   echo "Configuration file path is : " $SRS_CONFIG_FILE
@@ -29,5 +29,5 @@ echo ========== Database Configuration ==========
 
 echo ========== Start Application ==========
 cd $SRS_HOME
-bash $SRS_HOME/srs -c $SRS_CONFIG_FILE -t
-bash tail -f ./objs/srs.log
+bash ./objs/srs -c $SRS_CONFIG_FILE -t
+bash tail -f ./logs/srs.log
