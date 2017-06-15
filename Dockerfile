@@ -22,6 +22,7 @@ RUN yum install -y gcc gcc-c++ gdb make
 RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
 RUN yum install -y boost, http-parser, openssl-devel
 RUN yum install -y ffmpeg
+RUN yum install -y nginx
 
 # Python Install
 RUN yum install -y python
@@ -31,6 +32,7 @@ RUN pip install cherrypy
 
 # Make SRS Application
 WORKDIR /install/srs
+USER root
 RUN chmod a+x ./configure 
 RUN ./configure --jobs=16 --x86-x64 --prefix=/usr/local/srs --with-hls --with-hds --with-dvr --with-nginx --with-ssl --with-ffmpeg --with-transcode --with-ingest --with-stat --with-http-callback --with-http-server --with-stream-caster --with-http-api --with-librtmp --without-research --without-utest --without-gperf --without-gmc --without-gmp --without-gcp --without-gprof --without-arm-ubuntu12 --without-mips-ubuntu12 --log-trace
 RUN make --jobs=16
