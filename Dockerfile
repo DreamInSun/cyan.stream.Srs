@@ -20,7 +20,7 @@ RUN rpm -ivh rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 #========== Install Application ==========
 RUN yum install -y gcc gcc-c++ gdb make
 RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
-RUN yum install -y boost, http-parser, nginx, openssl-devel
+RUN yum install -y boost, http-parser, openssl-devel
 RUN yum install -y ffmpeg
 
 # Python Install
