@@ -27,7 +27,7 @@ RUN yum install -y nginx
 # Python Install
 RUN yum install -y python
 RUN yum install -y  python-pip
-RUN pip install cherrypy
+RUN pip install cherrypy==3.2.4
 
 
 # Make SRS Application
