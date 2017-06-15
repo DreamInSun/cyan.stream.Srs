@@ -28,6 +28,6 @@ echo ========== Initialize Database ==========
 echo ========== Database Configuration ========== 
 
 echo ========== Start Application ==========
-cd $SRS_HOME
+cd /install
 bash ./objs/srs -c $SRS_CONFIG_FILE -t
 bash tail -f ./logs/srs.log
