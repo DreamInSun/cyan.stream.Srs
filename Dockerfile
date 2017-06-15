@@ -23,10 +23,9 @@ RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
 RUN yum install -y boost, http-parser, nginx, openssl-devel
 RUN yum install -y ffmpeg
 
-# Install 
+# Python Install
 RUN yum install -y python-setuptools
 RUN easy_install cherrypy
-
 
 
 # Make SRS Application
