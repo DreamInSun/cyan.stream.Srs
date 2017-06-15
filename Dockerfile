@@ -14,7 +14,7 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 #========== Install Application ==========
 ADD install /install
 WORKDIR /install/install
-RUN sudo rpm -ivh epel-release-6-8.noarch.rpm
+RUN rpm -ivh epel-release-6-8.noarch.rpm
 
 #========== Install Application ==========
 RUN yum install -y gcc gcc-c++ gdb make
@@ -28,8 +28,8 @@ RUN yum install -y openssl-devel
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
-RUN sudo ./configure --jobs=16 --x86-x64 --prefix=/usr/local/srs --with-hls --with-hds --with-dvr --with-nginx --with-ssl --with-ffmpeg --with-transcode --with-ingest --with-stat --with-http-callback --with-http-server --with-stream-caster --with-http-api --with-librtmp --without-research --without-utest --without-gperf --without-gmc --without-gmp --without-gcp --without-gprof --without-arm-ubuntu12 --without-mips-ubuntu12 --log-trace
-RUN sudo make --jobs=16
+RUN ./configure --jobs=16 --x86-x64 --prefix=/usr/local/srs --with-hls --with-hds --with-dvr --with-nginx --with-ssl --with-ffmpeg --with-transcode --with-ingest --with-stat --with-http-callback --with-http-server --with-stream-caster --with-http-api --with-librtmp --without-research --without-utest --without-gperf --without-gmc --without-gmp --without-gcp --without-gprof --without-arm-ubuntu12 --without-mips-ubuntu12 --log-trace
+RUN make --jobs=16
 
 # RUN rm -rf install
 
