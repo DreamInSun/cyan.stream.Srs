@@ -43,7 +43,7 @@ EXPOSE 1985
 
 
 #========= Add Entry Point ==========
-ADD shell /shell
+ADD shell /shell 
 RUN chmod a+x /shell/*
 ENTRYPOINT ["/shell/docker-entrypoint.sh"]
 

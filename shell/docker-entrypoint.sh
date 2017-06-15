@@ -11,6 +11,7 @@ echo CONFIG_KEY is $CONFIG_KEY
 
 echo ========== Set Up Environment ========== 
 export SRS_HOME=/install/srs
+export SRS_LOG_FILE = /logs/srs.log
 
 if [ ! $SRS_CONFIG_FILE ]; then
   SRS_CONFIG_FILE=/conf/srs.conf
@@ -29,5 +30,6 @@ echo ========== Database Configuration ==========
 
 echo ========== Start Application ==========
 bash install/objs/srs -c $SRS_CONFIG_FILE -t
-cat "Start SRS and trace log..." >> /logs/srs.log
-tailf /logs/srs.log
+touch $SRS_LOG_FILE
+cat "Start SRS and trace log..." >> $SRS_LOG_FILE
+tail -f $SRS_LOG_FILE
