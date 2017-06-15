@@ -15,20 +15,19 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 ADD install /install
 WORKDIR /install
 RUN rpm -ivh epel-release-6-8.noarch.rpm
-
+RUN rpm -ivh rpmforge-release-0.5.3-1.el6.rf.i686.rpm
 
 #========== Install Application ==========
 RUN yum install -y gcc gcc-c++ gdb make
 RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
-RUN yum install -y boost
-RUN yum install -y http-parser
-
-RUN yum install -y cherrypy
-RUN yum install -y nginx
-RUN yum install -y openssl-devel
-
-RUN rpm -ivh rpmforge-release-0.5.3-1.el6.rf.i686.rpm
+RUN yum install -y boost, http-parser, nginx, openssl-devel
 RUN yum install -y ffmpeg
+
+# Install 
+RUN yum install -y python-setuptools
+RUN easy_install cherrypy
+
+
 
 # Make SRS Application
 WORKDIR /install/srs
