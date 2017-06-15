@@ -17,7 +17,12 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 #========== Install Application ==========
 RUN yum install -y gcc gcc-c++ gdb make
 RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
-RUN yum install -y boost，http-parser2.1，ffmpeg，cherrypy，nginx，openssl-devel，
+RUN yum install -y boost
+RUN yum install -y http-parser2.1
+RUN yum install -y ffmpeg
+RUN yum install -y cherrypy
+RUN yum install -y nginx
+RUN yum install -y openssl-devel
 
 ADD install /install
 
