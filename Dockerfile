@@ -6,12 +6,8 @@ From centos:6.8
 MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Extension ==========
-wget http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-
-
 
 #========== Environment ==========
-
 
 #========== Configuration ==========
 
