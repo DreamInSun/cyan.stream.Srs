@@ -11,7 +11,7 @@ echo CONFIG_KEY is $CONFIG_KEY
 
 echo ========== Set Up Environment ========== 
 export SRS_HOME=/install/srs
-export SRS_LOG_FILE = /logs/srs.log
+export SRS_LOG_FILE=/logs/srs.log
 
 if [ ! $SRS_CONFIG_FILE ]; then
   SRS_CONFIG_FILE=/conf/srs.conf
