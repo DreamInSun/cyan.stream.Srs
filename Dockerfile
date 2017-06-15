@@ -48,6 +48,6 @@ RUN chmod a+x /shell/*
 
 
 #========= Start Service ==========
-#ENTRYPOINT ["/shell/docker-entrypoint.sh"]
-WORKDIR /install/srs
-CMD ./objs/srs -c /conf/srs.conf -t
+ENTRYPOINT ["/shell/docker-entrypoint.sh"]
+#WORKDIR /install/srs
+#CMD ./objs/srs -c /conf/srs.conf -t
