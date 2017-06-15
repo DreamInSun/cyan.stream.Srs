@@ -24,7 +24,7 @@ RUN yum install -y boost, http-parser, nginx, openssl-devel
 RUN yum install -y ffmpeg
 
 # Python Install
-RUM yum install -y python
+RUN yum install -y python
 RUN yum install -y  python-pip
 RUN pip install cherrypy
 
