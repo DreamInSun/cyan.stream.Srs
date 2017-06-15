@@ -22,13 +22,6 @@ RUN yum install -y gcc gcc-c++ gdb make
 RUN yum install -y patch unzip pcre-devel automake autoconf libtool zlib-devel
 RUN yum install -y boost http-parser openssl-devel
 RUN yum install -y ffmpeg
-# RUN yum install -y nginx
-
-# Python Install
-# RUN yum install -y python
-# RUN yum install -y  python-pip
-# RUN pip install cherrypy==3.2.4
-
 
 # Make SRS Application
 WORKDIR /install/srs
@@ -55,4 +48,4 @@ RUN chmod a+x /shell/*
 #ENTRYPOINT ["/shell/docker-entrypoint.sh"]
 
 #========= Start Service ==========
-CMD /bin/bash
+CMD /install/srs/objs/srs -c /conf/srs.conf
