@@ -13,7 +13,7 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Install Application ==========
 ADD install /install
-WORKDIR /install/install
+WORKDIR /install
 RUN rpm -ivh epel-release-6-8.noarch.rpm
 
 #========== Install Application ==========
