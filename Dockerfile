@@ -6,6 +6,8 @@ From centos:6.8
 MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Extension ==========
+wget http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+
 
 
 #========== Environment ==========
@@ -13,6 +15,10 @@ MAINTAINER "DreamInSun" <yancy_chen@hotmail.com>
 
 #========== Configuration ==========
 
+#========== Install Application ==========
+ADD install /install
+WORKDIR /install/install
+RUN sudo rpm -ivh epel-release-6-8.noarch.rpm
 
 #========== Install Application ==========
 RUN yum install -y gcc gcc-c++ gdb make
@@ -23,8 +29,6 @@ RUN yum install -y ffmpeg
 RUN yum install -y cherrypy
 RUN yum install -y nginx
 RUN yum install -y openssl-devel
-
-ADD install /install
 
 WORKDIR /install/srs
 RUN chmod a+x ./configure 
